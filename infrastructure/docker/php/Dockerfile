@@ -1,0 +1,54 @@
+FROM bitnami/php-fpm:8.1 as base_php
+SHELL ["/bin/bash", "-oeux", "pipefail", "-c"]
+
+# timezone environment
+ENV TZ=UTC \
+  # locale
+  LANG=en_US.UTF-8 \
+  LANGUAGE=en_US:en \
+  LC_ALL=en_US.UTF-8 \
+  # composer environment
+  COMPOSER_ALLOW_SUPERUSER=1 \
+  COMPOSER_HOME=/composer
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+RUN apt-get update \
+  && apt-get -y install git libicu-dev libonig-dev libzip-dev unzip locales libcurl4-openssl-dev \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* \
+  && locale-gen en_US.UTF-8 \
+  && localedef -f UTF-8 -i en_US en_US.UTF-8 \
+  && mkdir /var/run/php-fpm
+#RUN docker-php-ext-enable curl fileinfo gettext intl pdo_mysql mbstring zip bcmath exif
+RUN composer config -g process-timeout 3600
+
+#COPY docker/php/php-fpm.d/zzz-www.conf /opt/bitnami/php/etc/php-fpm.d/zzz-www.conf
+#COPY docker/php/php.ini /usr/local/etc/php/php.ini
+#
+RUN mkdir /entrypoint.d
+COPY docker/php/entrypoint.sh /entrypoint.sh
+RUN ["chmod", "777", "/entrypoint.d"]
+RUN ["chmod", "+x", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["php-fpm", "-F", "--pid", "/opt/bitnami/php/tmp/php-fpm.pid", "-y", "/opt/bitnami/php/etc/php-fpm.conf"]
+
+WORKDIR /app
+
+FROM base_php as composer_install
+# install roach_php
+ADD composer.json /app/composer.json
+RUN composer install
+RUN cp /app/composer.json /tmp/composer.json && cp /app/composer.lock /tmp/composer.lock
+
+FROM base_php as xdebug_build
+# install xdebug
+RUN apt-get update \
+    && apt-get -y install build-essential autoconf
+RUN pecl install xdebug
+
+FROM composer_install as xdebug_install
+COPY --from=xdebug_build /opt/bitnami/php/lib/php/extensions/xdebug.so /opt/bitnami/php/lib/php/extensions/xdebug.so
+COPY docker/php/conf.d/xdebug.ini /opt/bitnami/php/etc/conf.d/99-xdebug.ini
+COPY docker/php/entrypoint.d/01-xdebug-setup.sh /entrypoint.d/01-xdebug-setup.sh
+RUN ["chmod", "+x", "/entrypoint.d/01-xdebug-setup.sh"]
