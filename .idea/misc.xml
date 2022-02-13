@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UnattendedHostPersistenceState">
+    <option name="openedFilesInfos">
+      <list>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="1232" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="309" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/entrypoint.sh" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="112" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/php-fpm.d/zzz-www.conf" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="196" />
+          <option name="fileUrl" value="file://$APPLICATION_CONFIG_DIR$/docker/ffxiv-scraping-app-1/entrypoint.sh" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$APPLICATION_CONFIG_DIR$/docker/ffxiv-scraping-app-1/.dockerenv" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="1234" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/Dockerfile-test" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/mysql/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/mysql/my.cnf" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="534" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker-compose.yml" />
+        </OpenedFileInfo>
+      </list>
+    </option>
+  </component>
+</project>
