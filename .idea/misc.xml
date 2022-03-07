@@ -4,22 +4,6 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="1232" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/Dockerfile" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="309" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/entrypoint.sh" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="112" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/php-fpm.d/zzz-www.conf" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="196" />
-          <option name="fileUrl" value="file://$APPLICATION_CONFIG_DIR$/docker/ffxiv-scraping-app-1/entrypoint.sh" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
           <option name="caretOffset" value="0" />
           <option name="fileUrl" value="file://$APPLICATION_CONFIG_DIR$/docker/ffxiv-scraping-app-1/.dockerenv" />
         </OpenedFileInfo>
@@ -36,8 +20,28 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/mysql/my.cnf" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="534" />
+          <option name="caretOffset" value="777" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker-compose.yml" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2966" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/.gitignore" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="248" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/Main.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="228" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/conf.d/xdebug.ini" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/php-fpm.d/zzz-www.conf" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="1747" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker/php/Dockerfile" />
         </OpenedFileInfo>
       </list>
     </option>

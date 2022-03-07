@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
+      target: with_xdebug
     volumes:
       - ../src:/app
       - /app/vendor
