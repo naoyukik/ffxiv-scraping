@@ -4,10 +4,6 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="160" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/docker-compose.yml" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
           <option name="caretOffset" value="0" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/.env" />
         </OpenedFileInfo>
@@ -41,6 +37,14 @@
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="fileUrl" value="mock:///DiffPreview" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="391" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/infrastructure/composer.json" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/.gitignore" />
         </OpenedFileInfo>
       </list>
     </option>
