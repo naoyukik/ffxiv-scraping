@@ -1,6 +1,6 @@
 {
     "require": {
-        "roach-php/core": "^0.3.0",
+        "roach-php/core": "^1.0.0",
         "symfony/orm-pack": "^2.2",
         "symfony/dotenv": "^6.0"
     },
@@ -8,8 +8,7 @@
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "*",
         "vimeo/psalm": "^4.20",
-        "symfony/maker-bundle": "^1.36",
-        "phpstan/phpstan": "^1.4"
+        "symfony/maker-bundle": "^1.36"
     },
     "autoload": {
         "psr-4": {

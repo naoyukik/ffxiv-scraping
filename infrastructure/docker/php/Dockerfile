@@ -50,6 +50,7 @@ RUN composer install \
 FROM base_php as build_xdebug
 RUN apt-get update \
     && apt-get -y install build-essential autoconf \
+    && apt-get clean \
     && pecl install xdebug
 
 FROM composer_install as with_xdebug

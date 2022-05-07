@@ -13,6 +13,9 @@ init:
 vendor-to-local:
 	rm -rf ../src/vendor/*
 	docker cp ffxiv-scraping-app-1:/app/vendor ../src
+composer.json-to-local:
+	docker cp ffxiv-scraping-app-1:/tmp/composer.json ../src
+	docker cp ffxiv-scraping-app-1:/tmp/composer.lock ../src
 remake:
 	@make destroy
 	@make init
@@ -39,9 +42,7 @@ web:
 app:
 	docker-compose exec app bash
 migrate:
-	docker-compose exec app /composer/vendor/bin/phalcon-migrations run
 info:
-	docker-compose exec -T app /composer/vendor/bin/phalcon info
 fresh:
 seed:
 rollback-test:
